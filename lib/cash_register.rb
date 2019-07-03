@@ -7,7 +7,7 @@ attr_accessor :total, :discount, :items
     @discount = discount
   end
 
-  def add_item(title*, price, optional = 1)
+  def add_item(*title, price, optional = 1)
     @items = []
     optional.times {@items << title}
     @total = @total + (price * optional)
