@@ -7,9 +7,6 @@ attr_accessor :total, :discount,
     @discount = discount
   end
 
-def items=(items)
-  @items = []
-end
 
   def add_item(title, price, optional = 1)
     optional.times {@items << title}
