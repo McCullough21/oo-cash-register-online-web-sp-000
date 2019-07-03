@@ -11,6 +11,7 @@ attr_accessor :total, :discount, :items
 
   def add_item(title, price, optional = 1)
     optional.times {@items << title}
+    @price = price
     @total = @total + (price * optional)
   end
 
@@ -22,5 +23,7 @@ attr_accessor :total, :discount, :items
      "After the discount, the total comes to $#{@total.to_i}."
     end
   end
+
+def void_last_transaction
 
 end
